@@ -1,4 +1,5 @@
 # QHotkey
+
 A global shortcut/hotkey for Desktop Qt-Applications.
 
 The QHotkey is a class that can be used to create hotkeys/global shortcuts, aka shortcuts that work everywhere, independent of the application state. This means your application can be active, inactive, minimized or not visible at all and still receive the shortcuts.
@@ -31,25 +32,6 @@ $ cmake --build build
 
 ## Installation
 The package is providet as qpm  package, [`de.skycoder42.qhotkey`](https://www.qpm.io/packages/de.skycoder42.qhotkey/index.html). You can install it either via qpmx (preferred) or directly via qpm.
-
-### Via qpmx
-[qpmx](https://github.com/Skycoder42/qpmx) is a frontend for qpm (and other tools) with additional features, and is the preferred way to install packages. To use it:
-
-1. Install qpmx (See [GitHub - Installation](https://github.com/Skycoder42/qpmx#installation))
-2. Install qpm (See [GitHub - Installing](https://github.com/Cutehacks/qpm/blob/master/README.md#installing), for **windows** see below)
-3. In your projects root directory, run `qpmx install de.skycoder42.qhotkey`
-
-### Via qpm
-
-1. Install qpm (See [GitHub - Installing](https://github.com/Cutehacks/qpm/blob/master/README.md#installing), for **windows** see below)
-2. In your projects root directory, run `qpm install de.skycoder42.qhotkey`
-3. Include qpm to your project by adding `include(vendor/vendor.pri)` to your `.pro` file
-
-Check their [GitHub - Usage for App Developers](https://github.com/Cutehacks/qpm/blob/master/README.md#usage-for-app-developers) to learn more about qpm.
-
-**Important for Windows users:** QPM Version *0.10.0* (the one you can download on the website) is currently broken on windows! It's already fixed in master, but not released yet. Until a newer versions gets released, you can download the latest dev build from here:
-- https://storage.googleapis.com/www.qpm.io/download/latest/windows_amd64/qpm.exe
-- https://storage.googleapis.com/www.qpm.io/download/latest/windows_386/qpm.exe
 
 ## Usage
 The general usage is to create QHotkey instances for specific hotkeys, register them and then simply connect to the signal emitted once the hotkey is pressed.
